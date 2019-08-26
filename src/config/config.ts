@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import * as path from 'path';
 import { IConfig } from 'src/interfaces/config';
 
 const config = {

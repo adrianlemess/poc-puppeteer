@@ -6,7 +6,9 @@ const { puppeteerUrl } = config;
 
 class PuppeteerController {
     getReport(req: Request, res: Response) {
-        printPDF(puppeteerUrl).then(pdf => {
+        console.log(req.query);
+        const url = req.query.puppeteerUrl || puppeteerUrl;
+        printPDF(url).then(pdf => {
             res.set({
                 'Content-Type': 'application/pdf',
                 'Content-Length': pdf.length
@@ -16,7 +18,9 @@ class PuppeteerController {
     }
 
     getSnapshot(req: Request, res: Response) {
-        snapshot().then(image => {
+        console.log(req.query);
+        const url = req.query.puppeteerUrl || puppeteerUrl;
+        snapshot(url).then(image => {
             res.set({
                 'Content-Type': 'image/png',
                 'Content-Length': image.length

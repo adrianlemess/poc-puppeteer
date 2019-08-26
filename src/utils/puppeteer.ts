@@ -15,12 +15,12 @@ export const printPDF = async function (puppeteerUrl) {
   }
 }
 
-export const snapshot = async function () {
+export const snapshot = async function (url) {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.setViewport({ width: 767, height: 1024 });
-    await page.goto('https://getbootstrap.com/');
+    await page.goto(url);
     const image = await page.screenshot({ path: 'bootstrap.png', fullPage: true });
     browser.close();
     return image;
