@@ -99,6 +99,14 @@ npm run test
 
 OBS: A página de testes possui CSS próprio de impressão.
 
+Examples:
+http://localhost:4300/api/puppeteer/snapshot?puppeteerUrl=https://www.linkedin.com
+http://localhost:4300/api/puppeteer/report?puppeteerUrl=https://www.linkedin.com
+
+Com a página rodando:
+http://localhost:4300/api/puppeteer/snapshot
+http://localhost:4300/api/puppeteer/report
+
 ## Autor
 
 - **Adrian Lemes Caetano** - [GitHub](https://github.com/adrianlemess)

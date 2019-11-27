@@ -6,8 +6,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon index.ts",
-    "start": "node ./dist/index.js",
-    "prod": "npm run build && npm run start",
+    "start": "npm run prod",
+    "start:prod": "node ./dist/index.js",
+    "prod": "npm run build && npm run start:prod",
     "test": "jest"
   },
   "keywords": [
